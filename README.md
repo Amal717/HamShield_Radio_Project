@@ -1,4 +1,3 @@
-````md
 # HamShield Radio
 
 > Embedded radio development platform based on the **RDA1846** transceiver.
@@ -39,17 +38,17 @@ HamShield_Radio/
 │   └── main.cpp
 └── test/
     └── README
-````
+```
 
 ### Directory Overview
 
-| Path                    | Purpose                                    |
-| ----------------------- | ------------------------------------------ |
-| `src/`                  | Application and communication source code  |
-| `include/`              | Project header files                       |
-| `lib/`                  | Project-specific libraries                 |
-| `test/`                 | Test code                                  |
-| `platformio.ini`        | PlatformIO project configuration           |
+| Path | Purpose |
+| --- | --- |
+| `src/` | Application and communication source code |
+| `include/` | Project header files |
+| `lib/` | Project-specific libraries |
+| `test/` | Test code |
+| `platformio.ini` | PlatformIO project configuration |
 | `compile_commands.json` | Compilation database for development tools |
 
 ### Core Source Files
@@ -98,10 +97,10 @@ The initial hardware interface uses three signals:
 └───────────────┘
          │
          ▼
-   ┌───────────┐
-   │ RDA1846   │
+   ┌────────────┐
+   │  RDA1846   │
    │ Transceiver│
-   └───────────┘
+   └────────────┘
 ```
 
 The exact register configuration and radio functionality will be developed progressively as the communication layer is verified.
@@ -152,9 +151,9 @@ No IDE-specific workflow is required.
 
 Install:
 
-* PlatformIO
-* A supported PlatformIO development environment
-* The appropriate USB/serial permissions for the target board
+- PlatformIO
+- A supported PlatformIO development environment
+- The appropriate USB/serial permissions for the target board
 
 Verify PlatformIO:
 
@@ -166,7 +165,7 @@ pio --version
 
 # 🔨 Building the Project
 
-Clone or enter the project directory:
+Enter the project directory:
 
 ```bash
 cd ~/Project_Workspace/platformio/HamShield_Radio
@@ -250,12 +249,12 @@ Serial.begin(9600);
 
 Therefore, the serial terminal must be configured for:
 
-| Setting   | Value  |
-| --------- | ------ |
+| Setting | Value |
+| --- | --- |
 | Baud rate | `9600` |
-| Data bits | `8`    |
-| Parity    | None   |
-| Stop bits | `1`    |
+| Data bits | `8` |
+| Parity | None |
+| Stop bits | `1` |
 
 The serial output is viewed using **CuteCom**.
 
@@ -359,18 +358,19 @@ Each layer will be tested before moving to the next.
 
 Currently established:
 
-* [x] PlatformIO project structure
-* [x] Command-line build
-* [x] Command-line firmware upload
-* [x] Serial output at `9600` baud
-* [x] RDA1846 communication API structure
-* [ ] Verified register read
-* [ ] Verified register write
-* [ ] RDA1846 initialization
-* [ ] Radio configuration
-* [ ] Transmit/receive operation
+- [x] PlatformIO project structure
+- [x] Command-line build
+- [x] Command-line firmware upload
+- [x] Serial output at `9600` baud
+- [x] RDA1846 communication API structure
+- [ ] Verified register read
+- [ ] Verified register write
+- [ ] RDA1846 initialization
+- [ ] Radio configuration
+- [ ] Transmit/receive operation
 
 ---
+
 ## 📄 License
 
 This project contains code derived from the
@@ -381,5 +381,3 @@ The licensing and copyright terms of the original source code remain applicable
 to the portions derived from that project.
 
 Additional original work in this project will be licensed separately.
-```
----
