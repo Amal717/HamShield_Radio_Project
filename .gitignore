@@ -1,0 +1,29 @@
+# PlatformIO
+.pio/
+
+# PlatformIO IDE / cache
+.cache/
+
+# Compiled binaries / firmware
+*.bin
+*.elf
+*.hex
+*.map
+
+# Object files
+*.o
+*.obj
+
+# Editor / IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
