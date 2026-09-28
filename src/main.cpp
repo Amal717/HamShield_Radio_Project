@@ -16,8 +16,9 @@
 #include <Arduino.h>
 #include "HamShield_comms.h"
 #include "HamShield.h"
+#include "demo.h"
 
-#define nSEN    5
+//#define nSEN    5
 
 
 void setup()
@@ -52,4 +53,6 @@ void loop()
             Serial.print(" ");
     }
     Serial.println();
+
+    // ham_init();
 }
