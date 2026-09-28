@@ -8,6 +8,7 @@
 #define nCS A1 //15 //
 #define CLK A5 //19 //
 #define DAT A4 //18 //
+#define nSEN 3
 #define MIC 3
 #else // assume Raspberry Pi
 #include "stdint.h"
