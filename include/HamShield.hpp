@@ -84,6 +84,11 @@
 #define HAM_VOICE_GAIN_DAC_GAIN         4       /* [7:4] */
 #define HAM_VOICE_GAIN_ADC_TX_BIT       8       /* [11:8] */
 
+/* --- squelch open threshold --- */
+#define HAM_SQ_THRESHOLD_REG            0x49
+#define HAM_SQ_THRESHOLD_OPEN_BIT       7       /* [13:7] */
+#define HAM_SQ_THRESHOLD_LOW_BIT        0       /* [6:0] */
+
 /* --- ctcss freq  register --- */
 #define HAM_CTCSS_FREQ1_REG             0x4A
 #define HAM_CTCSS_FREQ2_REG             0x4D
@@ -159,6 +164,18 @@ class HamShield {
         void set_cdcss_code(uint32_t code);
         void set_cdcss_phase_shift(shift_t shift);
         void set_ctcss_cdcss_mode(ctcss_cdcss_sel_t mode);
+        void set_cdcss_bit();
+        void set_ctcss_cdcss_out(ctcss_cdcss_out_t mode);
+        void set_ctcss_cdcss_det_mode(ctcss_cdcss_det_en_t reg_bit);
+        void set_ctcss_threshold_in(uint8_t value);
+        void set_ctcss_threshold_out(uint8_t value);
+        void set_tail_elim_mode(tail_elim_t mode);
+        void set_auto_squelch_rx(rx_sq_t mode);
+        void squelch_det_enable(sq_det_enable_t reg_bit);
+        void squelch_det_disable(sq_det_disable_t reg_bit);
+        void set_squelch_open_threshold(uint8_t threshold_db);
+        void set_squelch_low_threshold(uint8_t threshold_db);
+        void set_squelch_out(sq_out_t mode);
 };
 
 
