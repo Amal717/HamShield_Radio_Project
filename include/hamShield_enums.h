@@ -68,6 +68,52 @@ typedef enum {
 typedef enum {
     CTCSS_MODE_TX = 3,
     CDCSS_MODE_TX = 2,
-    CTCSS_CDCSS_GPIO0 = 1
+    CTCSS_CDCSS_GPIO0 = 1,
+    NO_CTCSS_CDCSS_TX = 0
 }ctcss_cdcss_sel_t;
+
+typedef enum {
+    CTCSS_CDCSS_WAVE_GPIO0 = 1,
+    CTCSS_CDCSS_COMPARED_GPIO0 = 0,
+}ctcss_cdcss_out_t;
+
+typedef enum {
+    DETECT_PHASE_SHIFT  = 4,
+    DETECT_CTCSS_2_FREQ = 3,
+    DETECT_INVERT_CDCSS = 2,
+    DETECT_NORMAL_CDCSS = 1,
+    DETECT_CTCSS_1_FREQ = 0
+}ctcss_cdcss_det_en_t;
+
+typedef enum {
+    TAIL_ELIM_ENABLE = 1,
+    TAIL_ELIM_DISABLE = 0,
+}tail_elim_t;
+
+typedef enum {
+    AUTO_SQ_ENABLE = 1,
+    AUTO_SQ_DISABLE = 0,
+}rx_sq_t ;
+
+typedef enum {
+    RSSI_DET_ENABLE = 6,
+    NOISE_DET_ENABLE = 7,
+    RSSI_NOISE_ENABLE = 8,
+    ADJACENT_CH_DET_ENABLE = 9,
+    FM_MOD_SIGNAL_ENABLE = 0
+}sq_det_enable_t;
+
+typedef enum {
+    RSSI_DET_DISABLE = 6,
+    NOISE_DET_DISABLE = 7,
+    RSSI_NOISE_DISABLE = 8,
+    ADJACENT_CH_DET_DISABLE = 9,
+    FM_MOD_SIGNAL_DISABLE = 0
+}sq_det_disable_t;
+
+typedef enum {
+    SQ_CMP_SUB_AUDIO_CMP_GPIO6 = 1,
+    SQ_CMP_GPIO6 = 0
+}sq_out_t;
+
 #endif
